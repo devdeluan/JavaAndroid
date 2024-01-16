@@ -57,20 +57,20 @@ public class MainActivity extends AppCompatActivity {
                 double altura = Double.parseDouble(alturaInput.getText().toString());
 
                 // Calcula o IMC
-                double imc = calcularIMC(peso, altura);
+                double imc = peso / (altura * altura);
 
-                // Exibe o resultado do IMC
-                resultado.setText(String.valueOf(valorConvertido);
 
                 // Classifica o IMC
                 String classificacaoImc = classificarIMC(imc);
                 classificacao.setText("Classificação: " + classificacaoImc);
             }
 
-            private double calcularIMC(double peso, double altura) {
-                // Fórmula do IMC: peso / (altura * altura)
-                return peso / (altura * altura);
-            }
+
+
+
+            // Exibe o resultado do IMC
+//                resultado.setText(String.valueOf(imc));
+
 
             private String classificarIMC(double imc) {
                 // Adapte as faixas de classificação conforme necessário
